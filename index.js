@@ -9,8 +9,6 @@ app.use(bodyParser.json());
 // Endpoint to receive PagerDuty webhooks
 app.post('/pagerduty-icinga-integration', (req, res) => {
 
-  console.log('Received JSON:', JSON.stringify(req.body, null, 2));
-
   // Send back the received JSON as the response
   res.status(200).json(req.body);
 });
